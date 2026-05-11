@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+// Función para contar dígitos pares
+int contarPares(int numero) {
+    int contador = 0;
+    if (numero == 0) return 1; // Caso especial para el número 0
+
+    while (numero > 0) {
+        int ultimoDigito = numero % 10; // Extraemos el último dígito
+        if (ultimoDigito % 2 == 0) {    // Verificamos si es par
+            contador++;
+        }
+        numero = numero / 10; // Eliminamos el último dígito
+    }
+    return contador;
+}
+
+int main() {
+    int num;
+    cout << "Ingrese un número entero positivo: ";
+    cin >> num;
+
+    int totalPares = contarPares(num);
+    cout << "El número de dígitos pares es: " << totalPares << endl;
+
+    return 0;
+}
