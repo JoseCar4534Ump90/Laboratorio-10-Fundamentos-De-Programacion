@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+// Función para obtener notas y promediar
+float calcularPromedio(int cantidad) {
+    float suma = 0, valor;
+    for (int i = 1; i <= cantidad; i++) {
+        cout << "Ingrese el valor " << i << ": ";
+        cin >> valor;
+        suma += valor;
+    }
+    return suma / cantidad; // Retornamos el promedio
+}
+
+int main() {
+    int n;
+    cout << "¿Cuántos valores desea promediar?: ";
+    cin >> n;
+
+    if (n > 0) {
+        float promedio = calcularPromedio(n);
+        cout << "El promedio final es: " << promedio << endl;
+    } else {
+        cout << "Cantidad no válida." << endl;
+    }
+
+    return 0;
+}
