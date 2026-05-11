@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+// Función que calcula la sumatoria
+int calcularSuma(int n) {
+    int suma = 0;
+    for (int i = 1; i <= n; i++) {
+        suma += i; // Acumulamos el valor de i en cada vuelta
+    }
+    return suma; // Devolvemos el total
+}
+
+int main() {
+    int N;
+    cout << "Ingrese un número entero positivo: ";
+    cin >> N;
+
+    if (N > 0) {
+        int resultado = calcularSuma(N);
+        cout << "La suma de 1 hasta " << N << " es: " << resultado << endl;
+    } else {
+        cout << "Por favor, ingrese un número válido." << endl;
+    }
+
+    return 0;
+}
